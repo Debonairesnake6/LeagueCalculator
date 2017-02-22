@@ -1,0 +1,627 @@
+/**
+ * Created by Ryan on 2/22/2017.
+ */
+public class Item {
+    private int itemCount = 0;
+    Champion champ;
+
+    public Item(Champion champ) {
+        this.champ = champ;
+    }
+
+    public String[] AbyssalScepter() {
+        champ.setBonusmr(champ.getBonusmr() + 60);
+        champ.setAp(champ.getAp() + 60);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Nearby enemies take 10% more magDmg.";
+        return passive;
+    }
+    public String[] ArcangelsStaff() {
+        champ.setBonusmp(champ.getBonusmp() + 250);
+        champ.setAp(champ.getAp() + 80);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Grants AP equal to 3% MP. Refunds all mana costs by 25%.";
+        passive[1] = "Unique - Grants 8 MP per spell cast (2 times per 8s.)";
+        return passive;
+    }
+    public String[] ArdentCenser() {
+        champ.setBonusmp5(champ.getBonusmp5() + 50);
+        champ.setAp(champ.getAp() + 60);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Heals or shields on allies grant 20% AS and attacks drain 20 HP on-hit for 6s.";
+        return passive;
+    }
+    public String[] AthenesUnholyGrail() {
+        champ.setBonusmp5(champ.getBonusmp5() + 75);
+        champ.setBonusmr(champ.getBonusmr() + 25);
+        champ.setAp(champ.getAp() + 40);
+        champ.setCdr(champ.getCdr() + 20);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Gain 20% of your preMit damage as stacks up to 100-250. Heals or shields on allies consume the stacks to heal additionally.";
+        passive[1] = "Unique - Gain bonus HPRgn equal to MPRgn.";
+        return passive;
+    }
+    public String[] BannerOfCommand() {
+        champ.setBonusmp(champ.getBonusmp() + 400);
+        champ.setBonusarm(champ.getBonusarm() + 60);
+        champ.setBonusmr(champ.getBonusmr() + 30);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Promote a nearby minion. (120s CD)";
+        return passive;
+    }
+    public String[] BansheesVeil() {
+        champ.setBonushp(champ.getBonushp() + 300);
+        champ.setBonushp5(champ.getBonushp5() + 100);
+        champ.setBonusmr(champ.getBonusmr() + 70);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Gain spellshield after 40s of not taking damage.";
+        return passive;
+    }
+    public String[] BersekersGreaves() {
+        champ.setBonusas(champ.getBonusas() + 35);
+        champ.setMs(champ.getMs() + 45);
+        String[] passive = new String[1];
+        passive[0] = "none";
+        return passive;
+    }
+    public String[] BladeOfTheRuinedKing() {
+        champ.setBonusad(champ.getBonusad() + 25);
+        champ.setBonusas(champ.getBonusas() + 40);
+        champ.setLs(champ.getLs() + 10);
+        String [] passive = new String[2];
+        passive[0] = "Unique - On-hit 8% current HP damage in physical. Lifesteal applies.";
+        passive[1] = "Unique - Steal 10% maxHP on a target and slow by 25% for 3s.";
+        return passive;
+    }
+    public String[] BootsOfSwiftness() {
+        champ.setMs(champ.getMs() + 55);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Movement slowing effects are reduced by 25%.";
+        passive[1] = "";
+        return passive;
+    }
+    public String[] BootsOfMobility() {
+        champ.setMs(champ.getMs() + 25);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Grant +115 MS out of combat.";
+        return passive;
+    }
+    public String[] DeadMansPlate() {
+        champ.setBonushp(champ.getBonushp() + 500);
+        champ.setBonusarm(champ.getBonusarm() + 50);
+        String [] passive = new String[2];
+        passive[0] = "Unique - While moving gain up to 60 MS at 100 stacks.";
+        passive[1] = "Unique - Basic attacks discharge stacks, dealing 1/2 stacks damage. If 100 stacks are discharged, deal 100 damage and slow by 50%.";
+        return passive;
+    }
+    public String[] DeathsDance() {
+        champ.setBonusad(champ.getBonusad() + 75);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Heal for 15% of all damage dealt. AoE damage heals for 5%.";
+        passive[1] = "Unique - 15% of damage taken is taken over 3 seconds as a bleed instead.";
+        return passive;
+    }
+    public String[] DuskbladeOfDraktharr() {
+        champ.setBonusad(champ.getBonusad() + 65);
+        champ.setLeth(champ.getLeth() + 15);
+        String [] passive = new String[3];
+        passive[0] = "Unique - Gain 20% MS out of Combat.";
+        passive[1] = "Unique - After being unseen for 1s, deal 50+200% Lethality true damage on next hit.";
+        passive[2] = "Unique - If spotted by a ward, disable all nearby wards and traps for 8s.";
+        return passive;
+    }
+    public String[] EdgeOfNight() {
+        champ.setBonusad(champ.getBonusad() + 60);
+        champ.setBonusmr(champ.getBonusmr() + 35);
+        champ.setLeth(champ.getLeth() + 15);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Gain 20 MS out of Combat.";
+        passive[1] = "Unique - Channel for 1.5s to gain a spellshield that lasts for 10s. (45s cooldown.)";
+        return passive;
+    }
+    public String[] EssenceReaver() {
+        champ.setBonusad(champ.getBonusad() + 70);
+        champ.setCrit(champ.getCrit() + 20);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Gain CDR from Crit from other items (up to 20% CDR at 30% Crit).";
+        passive[1] = "Unique - Critical hits restore 3% maxMP.";
+        return passive;
+    }
+    public String[] EyeOfTheOasis() {
+        champ.setBonushp(champ.getBonushp() + 200);
+        champ.setBonushp5(champ.getBonushp5() + 100);
+        champ.setBonusmp5(champ.getBonusmp5() + 100);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Being near a minion's death but not dealing the last hit grants 6 G and 10 HP.";
+        passive[1] = "Unique - Consume a charge to place a stealth ward that lasts 50s. Holds up to 4 charges.";
+        return passive;
+    }
+    public String[] EyeOfTheWatchers() {
+        champ.setBonushp(champ.getBonushp() + 200);
+        champ.setBonusmp5(champ.getBonusmp5() + 100);
+        champ.setAp(champ.getAp() + 25);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Spells and basic attacks against champs or structures deal 15 extra damage and grant 15 gold, 1/10s.";
+        passive[1] = "Unique - Consume a charge to place a stealth ward that lasts 50s. Holds up to 4 charges.";
+        return passive;
+    }
+    public String[] FaceOfTheMountain() {
+        champ.setBonushp(champ.getBonushp() + 450);
+        champ.setBonushp5(champ.getBonushp5() + 100);
+        champ.setCdr(champ.getCdr() + 10);
+        champ.setGp10(champ.getGp10() + 2);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Melee attacks execute minions below (320+20/lvl), healing self and nearest ally while sharing gold.";
+        passive[1] = "Unique - Grants a shield to self and targeted ally champ equal to 10% maxHP. After 4 seconds, nearby enemies are slowed for 40% by 2s. (60s CD)";
+        return passive;
+    }
+    public String[] FrostQueensClaim() {
+        champ.setBonusmp5(champ.getBonusmp5() + 75);
+        champ.setAp(champ.getAp() + 50);
+        champ.setCdr(champ.getCdr() + 10);
+        champ.setGp10(champ.getGp10() + 2);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Spells and basic attacks against champs or structures deal 15 extra damage and grant 15 gold, 1/10s.";
+        passive[1] = "Unique - Sends out 2 ghosts that seek out nearby champs for 6s, revealing them and slowing them. (90s CD)";
+        return passive;
+    }
+    public String[] FrozenHeart() {
+        champ.setBonusmp(champ.getBonusmp() + 400);
+        champ.setBonusarm(champ.getBonusarm() + 90);
+        champ.setCdr(champ.getCdr() + 20);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Reduce AS of nearby enemies by 15%.";
+        return passive;
+    }
+    public String[] FrozenMallet() {
+        champ.setBonushp(champ.getBonushp() + 700);
+        champ.setBonusad(champ.getBonusad() + 30);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Basic attacks slow for 40%(melee)/30%(ranged) for 1.5s.";
+        return passive;
+    }
+    public String[] GuardianAngel() {
+        champ.setBonusarm(champ.getBonusarm() + 60);
+        champ.setBonusmr(champ.getBonusmr() + 45);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Upon reaching 0 HP, revive with the greater between 700HP or 30% maxHP and 30%MP after 4 seconds.";
+        return passive;
+    }
+    public String[] GuinsoosRageblade() {
+        champ.setBonusad(champ.getBonusad() + 35);
+        champ.setBonusas(champ.getBonusas() + 25);
+        champ.setAp(champ.getAp() + 50);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Basic attacks deal extra 15 mDmg.";
+        passive[1] = "Unique - Attacks grant 8% AS, 3 AD and 4 AP stacking up to 6 times for 6 s. While having 6s, every other basic attack triggers on hits twice.";
+        return passive;
+    }
+    public String[] HextechGLP800() {
+        champ.setBonushp(champ.getBonushp() + 300);
+        champ.setBonusmp(champ.getBonusmp() + 400);
+        champ.setAp(champ.getAp() + 80);
+        String [] passive = new String[2];
+        passive[0] = "Unique - 15% of damage taken is converted to MP. Spending MP restores 20% of the cost, up to 25 per cast.";
+        passive[1] = "Unique - Fire bolts that deal (100-200+35% AP) in a cone while slowing them for 65% for 0.5s. (40s CD)";
+        return passive;
+    }
+    public String[] HextechGunblade() {
+        champ.setBonusad(champ.getBonusad() + 40);
+        champ.setAp(champ.getAp() + 80);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Heal for 15% of damage dealt. 33% as effective for AoEs.";
+        passive[1] = "Unique - Deal 250+30% AP mDMG and slow target by 40%. (40s CD)";
+        return passive;
+    }
+    public String[] HextechProtobelt() {
+        champ.setBonushp(champ.getBonushp() + 300);
+        champ.setAp(champ.getAp() + 60);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Dash forward and launch bolts that do 75-150+25%AP damage. (40s CD.) Extra bolts increase damage by 10%.";
+        return passive;
+    }
+    public String[] IcebornGauntlet() {
+        champ.setBonusmp(champ.getBonusmp() + 500);
+        champ.setBonusarm(champ.getBonusarm() + 65);
+        champ.setCdr(champ.getCdr() + 20);
+        String [] passive = new String[1];
+        passive[0] = "Unique - After using an ability, next attack deals an extra 100% baseAD damage and creates a slow zone that slows enemies by 30%  for 2s.(1.5s CD)";
+        return passive;
+    }
+    public String[] InfinityEdge() {
+        champ.setBonusad(champ.getBonusad() + 70);
+        champ.setCrit(champ.getCrit() + 20);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Critical damage +50%.";
+        return passive;
+    }
+    public String[] IonianBootsOfLucidity() {
+        champ.setMs(champ.getMs() + 45);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Reduces summoner spell CDs by 10%.";
+        return passive;
+    }
+    public String[] KnightsVow() {
+        champ.setBonushp(champ.getBonushp() + 400);
+        champ.setBonushp5(champ.getBonushp5() + 100);
+        champ.setBonusarm(champ.getBonusarm() + 20);
+        String [] passive = new String[3];
+        passive[0] = "Unique - Designate all as Partner. (90s CD)";
+        passive[1] = "Unique - If partner is nearby, gain 40 AR and 15% MS towards them.";
+        passive[2] = "Unique - If partner is nearby, heal for 12% of damage they do, and receive 12% of damage they take.";
+        return passive;
+    }
+    public String[] LiandrysTorment() {
+        champ.setBonushp(champ.getBonushp() + 300);
+        champ.setAp(champ.getAp() + 80);
+        champ.setMpen(champ.getMpen() + 15);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Spells burn for 2%currentHP per second, for 3s. Damage is doubled against movement impaired targets.";
+        return passive;
+    }
+    public String[] LichBane() {
+        champ.setBonusmp(champ.getBonusmp() + 250);
+        champ.setAp(champ.getAp() + 80);
+        champ.setCdr(champ.getCdr() + 10);
+        champ.setMs(champ.getMs() * (1 + 0.07));
+        String [] passive = new String[1];
+        passive[0] = "Unique - After ability, next auto attack deals 75% base AD 50% AP. (1.5s CD)";
+        return passive;
+    }
+    public String[] LocketOfTheIronSolari() {
+        champ.setBonusarm(champ.getBonusarm() + 30);
+        champ.setBonusmr(champ.getBonusmr() + 60);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Grants a decaying shield to nearby allies for 2.5s that absorbs up to 35(+35/lvl) (90s CD.)";
+        return passive;
+    }
+    public String[] LordDominiksRegards() {
+        champ.setBonusad(champ.getBonusad() + 50);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Grants up to +15% physDmg against champs with greater maxHP (1.5%dmg per 50HP difference).";
+        passive[1] = "Unique - 45% Bonus Armor Pen.";
+        return passive;
+    }
+    public String[] LudensEcho() {
+        champ.setAp(champ.getAp() + 100);
+        champ.setMs(champ.getMs() * (1 + 0.1));
+        String [] passive = new String[1];
+        passive[0] = "Unique - Gain charges on movement and casts. At 100 charges, next spell consumes charges to deal 100+10% AP for up to 4 targets.";
+        return passive;
+    }
+    public String[] Manamune() {
+        champ.setBonusmp(champ.getBonusmp() + 250);
+        champ.setBonusad(champ.getBonusad() + 25);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Grants AD equal to 2% of MP. Refunds 15% of mana costs.";
+        passive[1] = "Unique - Grant 4MP for each basic attack or spell cast.";
+        return passive;
+    }
+    public String[] MawOfMalmortius() {
+        champ.setBonusad(champ.getBonusad() + 50);
+        champ.setBonusmr(champ.getBonusmr() + 45);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Upon taking mDMG that would hit you below 30%, grants a magic shield equal to 300+100%MR for 5s. ALso grants +20% AD, +10% SV and +10% LS.";
+        return passive;
+    }
+    public String[] MejaisSoulstealer() {
+        champ.setBonusmp(champ.getBonusmp() + 200);
+        champ.setAp(champ.getAp() + 20);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Grants 5 AP per Glory. Grants 10%MS if you have 15 or more stacks.";
+        passive[1] = "Unique - Grants 4 Glory per kill or 2 glory for assist, up to 25 Glory. Lose 10 stacks on death.";
+        return passive;
+    }
+    public String[] MercurialScimitar() {
+        champ.setBonusad(champ.getBonusad() + 65);
+        champ.setBonusmr(champ.getBonusmr() + 35);
+        champ.setLs(champ.getLs() + 10);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Removes all CC and grants 50% MS for 1s. (90s CD)";
+        return passive;
+    }
+    public String[] MercurysTreads() {
+        champ.setBonusmr(champ.getBonusmr() + 25);
+        champ.setMs(champ.getMs() + 45);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Reduce durations of CC by 30%.";
+        return passive;
+    }
+    public String[] MikaelsCrucible() {
+        champ.setBonusmp5(champ.getBonusmp5() + 100);
+        champ.setBonusmr(champ.getBonusmr() + 35);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[3];
+        passive[0] = "Unique - 20%Heal and Shield Power.";
+        passive[1] = "Unique - Grants HPRgn equal to MPRgn.";
+        passive[2] = "Unique - Removes CC from allied champ and grants slow immunity for 2s. (120s CD)";
+        return passive;
+    }
+    public String[] Morellonomicon() {
+        champ.setBonusmp(champ.getBonusmp() + 400);
+        champ.setAp(champ.getAp() + 100);
+        champ.setCdr(champ.getCdr() + 20);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Dealing mDMG to champs below 35% applies Grievous Wounds for 8s.";
+        passive[1] = "Unique - Kills and assists restore 20% maxMP.";
+        return passive;
+    }
+    public String[] MortalReminder() {
+        champ.setBonusad(champ.getBonusad() + 50);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Attacks apply Grievous Wounds for 5s.";
+        passive[1] = "Unique - 45% Bonus Armor Pen.";
+        return passive;
+    }
+    public String[] Muramana() {
+        champ.setBonusmp(champ.getBonusmp() + 1000);
+        champ.setBonusad(champ.getBonusad() + 25);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Grants AD equal to 2% MP. Refunds 15% of mana costs.";
+        passive[1] = "Unique - Single target spells and attacks deal and consume 3% of MP to deal twice as much extra damage.";
+        return passive;
+    }
+    public String[] NashorsTooth() {
+        champ.setBonusas(champ.getBonusas() + 50);
+        champ.setAp(champ.getAp() + 80);
+        champ.setCdr(champ.getCdr() + 20);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Attacks deal 15+15% AP.";
+        return passive;
+    }
+    public String[] NinjaTabi() {
+        champ.setBonusarm(champ.getBonusarm() + 30);
+        champ.setMs(champ.getMs() + 45);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Blocks 12% damage from auto attacks.";
+        return passive;
+    }
+    public String[] Ohmwrecker() {
+        champ.setBonushp(champ.getBonushp() + 300);
+        champ.setBonushp5(champ.getBonushp5() + 150);
+        champ.setBonusarm(champ.getBonusarm() + 50);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Prevents near enemy turrets from firing for 3s. (120s)";
+        passive[1] = "Unique - Builds 20% MS over 2s near turrets.";
+        return passive;
+    }
+    public String[] PhantomDancer() {
+        champ.setBonusas(champ.getBonusas() + 45);
+        champ.setCrit(champ.getCrit() + 30);
+        champ.setMs(champ.getMs() * (1 + 0.05));
+        String [] passive = new String[2];
+        passive[0] = "Unique - Move 7% towards enemies in sight.";
+        passive[1] = "Unique - Take 12% last damage from champion last attacked.";
+        return passive;
+    }
+    public String[] RabadonsDeathcap() {
+        champ.setAp(champ.getAp() + 120);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Increase AP by 35%.";
+        return passive;
+    }
+    public String[] RanduinsOmen() {
+        champ.setBonushp(champ.getBonushp() + 500);
+        champ.setBonusarm(champ.getBonusarm() + 60);
+        String [] passive = new String[3];
+        passive[0] = "Unique - Take 10% less damage from Critical Strikes.";
+        passive[1] = "Unique - Reduce attackers 15% AS when hit.";
+        passive[2] = "Unique - Slow enemy movement by 35% for 4 seconds. (60s CD)";
+        return passive;
+    }
+    public String[] RapidFirecannon() {
+        champ.setBonusas(champ.getBonusas() + 30);
+        champ.setCrit(champ.getCrit() + 30);
+        champ.setMs(champ.getMs() * (1 + 0.05));
+        String [] passive = new String[1];
+        passive[0] = "Unique - Moving and attacking makes attacks energized. Attacks gain 35% bonus range (up to 150) and deal 50-160 bonus mDmg.";
+        return passive;
+    }
+    public String[] RavenousHydra() {
+        champ.setBonushp5(champ.getBonushp5() + 100);
+        champ.setBonusad(champ.getBonusad() + 75);
+        champ.setLs(champ.getLs() + 12);
+        String [] passive = new String[3];
+        passive[0] = "Unique - 50% of total Life Steal applies to damage dealt by this item.";
+        passive[1] = "Unique - Basic attacks deal 20-60% of total AD to nearby enemies on hit.";
+        passive[2] = "Unique - Deals 60-100% AD as physical damage to nearby enemies.";
+        return passive;
+    }
+    public String[] Redemption() {
+        champ.setBonushp(champ.getBonushp() + 400);
+        champ.setBonushp5(champ.getBonushp5() + 75);
+        champ.setBonusmp5(champ.getBonusmp5() + 75);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[2];
+        passive[0] = "Unique - 10% Heal and Shield Power.";
+        passive[1] = "Unique - Target an area within 55000 range. After 2.5 seconds, heal allies in the area for 130+20/lvl and deal 10% maxHP true damage to enemies. Can be used while dead.";
+        return passive;
+    }
+    public String[] RighteousGlory() {
+        champ.setBonushp(champ.getBonushp() + 500);
+        champ.setBonushp5(champ.getBonushp5() + 100);
+        champ.setBonusmp(champ.getBonusmp() + 300);
+        String [] passive = new String[2];
+        passive[0] = "Unique - 15% of damage taken is gained as MP. Spending mana restores 20% of the cost as HP, up to 25 per cast.";
+        passive[1] = "Unique - Grants 75% MS when moving towards endmies for 4s. After 3s, all nearby enemies are slowed by 75% for 2s. (90s CD)";
+        return passive;
+    }
+    public String[] RodOfAges() {
+        champ.setBonushp(champ.getBonushp() + 300);
+        champ.setBonusmp(champ.getBonusmp() + 300);
+        champ.setAp(champ.getAp() + 60);
+        String [] passive = new String[2];
+        passive[0] = "Unique - 15% of damage taken is gained as MP. Spending mana restores 20% of the cost as HP, up to 25 per cast.";
+        passive[1] = "Unique - Grants 20 HP, 10 MP and 4 AP per stack (max 10). Grants 1 stack/min.";
+        return passive;
+    }
+    public String[] RunaansHurricane() {
+        champ.setBonusas(champ.getBonusas() + 40);
+        champ.setCrit(champ.getCrit() + 30);
+        champ.setMs(champ.getMs() * (1 + 0.07));
+        String [] passive = new String[2];
+        passive[0] = "Unique - Attacks deal 15 extra damage on hit.";
+        passive[1] = "Unique - When attacking, bolts are fired at up to 2 nearby enemies, dealing 25% AD. Bolts can crit and apply on hits.";
+        return passive;
+    }
+    public String[] RylaisCrystalScepter() {
+        champ.setBonushp(champ.getBonushp() + 300);
+        champ.setAp(champ.getAp() + 75);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Damaging spells slow enemies by 20% for 1s.";
+        return passive;
+    }
+    public String[] SeraphsEmbrace() {
+        champ.setBonusmp(champ.getBonusmp() + 1000);
+        champ.setAp(champ.getAp() + 80);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Grants AP equal to 3% MP. Refundes 25% of MP used.";
+        passive[1] = "Unique - Consumes 20% of current MP to grant a shield equal to amount consumed 150. (120s CD)";
+        return passive;
+    }
+    public String[] SpiritVisage() {
+        champ.setBonushp(champ.getBonushp() + 500);
+        champ.setBonushp5(champ.getBonushp5() + 200);
+        champ.setBonusmr(champ.getBonusmr() + 55);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Increases all healing received by 25%.";
+        return passive;
+    }
+    public String[] StatikkShiv() {
+        champ.setBonusas(champ.getBonusas() + 35);
+        champ.setCrit(champ.getCrit() + 30);
+        champ.setMs(champ.getMs() * (1 + 0.05));
+        String [] passive = new String[2];
+        passive[0] = "Unique - Moving and attacking gains Energized stacks.";
+        passive[1] = "Unique - Energized attacks deal 50-120 bonus mDmg to up to 5 targets on hit. Deals 120% bonus damage to minions and can critically strike.";
+        return passive;
+    }
+    public String[] SteraksGage() {
+        champ.setBonushp(champ.getBonushp() + 400);
+        champ.setAd(champ.getAd() + (1 + 0.25));
+        String [] passive = new String[1];
+        passive[0] = "Unique - Upon taking 400-1800 damage within 5 seconds, gain a rapidly decarying Shield for 30% of maxHP, grow in size and gain 25% base Attack Damage.";
+        return passive;
+    }
+    public String[] SunfireCape() {
+        champ.setBonushp(champ.getBonushp() + 500);
+        champ.setBonusarm(champ.getBonusarm() + 50);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Deals 25+level damage to nearby enemies per second.";
+        return passive;
+    }
+    public String[] TheBlackCleaver() {
+        champ.setBonushp(champ.getBonushp() + 300);
+        champ.setBonusad(champ.getBonusad() + 50);
+        champ.setCdr(champ.getCdr() + 20);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Dealing physical damage reduces enemy armor by 5% (up to 25%).";
+        passive[1] = "Unique - Dealing physical damage grants 20 movenet for 2 seconds. Assists or kill sgrant 60 MS for 2s. Halved for range champions.";
+        return passive;
+    }
+    public String[] TheBloodthirster() {
+        champ.setBonusad(champ.getBonusad() + 75);
+        champ.setLs(champ.getLs() + 20);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Basic attacks can overheal you up to a 50-350 shield.";
+        return passive;
+    }
+    public String[] Thornmail() {
+        champ.setBonusarm(champ.getBonusarm() + 100);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Being attack reflects damage equal to 25% of bonus Armor 15% of incoming damage.";
+        return passive;
+    }
+    public String[] TitanicHydra() {
+        champ.setBonushp(champ.getBonushp() + 450);
+        champ.setBonushp5(champ.getBonushp5() + 100);
+        champ.setBonusad(champ.getBonusad() + 35);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Basic attacks deal 5+1% maxHP as bonus damage to the target and 40+2.5%MaxHP damage in a cone behind the target.";
+        passive[1] = "Unique - Cleave damae to all targets in a cone on the next attack with 40+10% max HP.";
+        return passive;
+    }
+    public String[] TrinityForce() {
+        champ.setBonushp(champ.getBonushp() + 250);
+        champ.setBonusmp(champ.getBonusmp() + 250);
+        champ.setBonusad(champ.getBonusad() + 25);
+        champ.setBonusas(champ.getBonusas() + 40);
+        champ.setCdr(champ.getCdr() + 20);
+        champ.setMs(champ.getMs() * (1 + 0.05));
+        String [] passive = new String[2];
+        passive[0] = "Unique - Basic attacks grant 20MS for 2s. Kills grant 60MS. Halved for ranged champs.";
+        passive[1] = "Unique - After an ability, the next attack deals 200% baseAD bonus damage.";
+        return passive;
+    }
+    public String[] VoidStaff() {
+        champ.setAp(champ.getAp() + 80);
+        String [] passive = new String[1];
+        passive[0] = "Unique - 35% Magic Penetration";
+        return passive;
+    }
+    public String[] WarmogsArmor() {
+        champ.setBonushp(champ.getBonushp() + 800);
+        champ.setBonushp5(champ.getBonushp5() + 200);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[1];
+        passive[0] = "Unique - If you have 3000HP, restores 15% of maxHP every 5s if you haven't been damaged in 8 seconds.";
+        return passive;
+    }
+    public String[] WitsEnd() {
+        champ.setBonusas(champ.getBonusas() + 40);
+        champ.setBonusmr(champ.getBonusmr() + 40);
+        String [] passive = new String[2];
+        passive[0] = "Unique - 40 magic damage on hit.";
+        passive[1] = "Unique - Steal 5 MR on hit, up to 5 times.";
+        return passive;
+    }
+    public String[] YoumuusGhostblade() {
+        champ.setBonusad(champ.getBonusad() + 60);
+        champ.setCdr(champ.getCdr() + 10);
+        champ.setLeth(champ.getLeth() + 20);
+        String [] passive = new String[2];
+        passive[0] = "Unique - +20 MS out of combat.";
+        passive[1] = "Unique - Grant 20%MS for 6 seconds (45s CD)";
+        return passive;
+    }
+    public String[] ZekesHarbinger() {
+        champ.setBonusmp(champ.getBonusmp() + 250);
+        champ.setBonusarm(champ.getBonusarm() + 30);
+        champ.setAp(champ.getAp() + 50);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Bind to target ally (60s CD)";
+        passive[1] = "Unique - When nearby ally, you and ally generate charges. At 100 charges, increase ally's AP by 20% and crit by 50%.";
+        return passive;
+    }
+    public String[] ZhonyasHourglass() {
+        champ.setBonusarm(champ.getBonusarm() + 45);
+        champ.setAp(champ.getAp() + 70);
+        champ.setCdr(champ.getCdr() + 10);
+        String [] passive = new String[1];
+        passive[0] = "Unique - Enter stasis for 2.5s. (120s CD)";
+        return passive;
+    }
+    public String[] ZzRotPortal() {
+        champ.setBonushp5(champ.getBonushp5() + 125);
+        champ.setBonusarm(champ.getBonusarm() + 55);
+        champ.setBonusmr(champ.getBonusmr() + 55);
+        String [] passive = new String[2];
+        passive[0] = "Unique - Build up to 20% MS over 2s while near turrets or Void gates.";
+        passive[1] = "Unique - Spawn a Void Gate for 150s (150s CD)";
+        return passive;
+    }
+
+}
